@@ -1,0 +1,26 @@
+.navlinks {
+  margin-left: 10px;
+  display: flex;
+}
+
+.appbar {
+  background-color: #ffffff !important;
+}
+
+.logo {
+  flex-grow: 1;
+  cursor: pointer;
+  color: #333333;
+}
+
+.link {
+  text-decoration: none;
+  color: #333333;
+  font-size: 20px;
+  margin-left: 20px;
+
+  &:hover {
+    color: #00a0e6;
+    border-bottom: 1px solid #00a0e6;
+  }
+}
