@@ -1,5 +1,5 @@
 import { initialState } from "../store";
-import { SET_CURRENT_PAGE } from "../types";
+import { SET_CURRENT_PAGE } from "./paginationActionsTypes";
 
 export const paginationReducer = (state = initialState, action: { type: string; payload: number; }) => {
     switch (action.type) {
