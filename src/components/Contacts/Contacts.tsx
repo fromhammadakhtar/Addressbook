@@ -1,4 +1,3 @@
-import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { ContactType } from '../../utils/types';
 import Contact from '../Contact/Contact';

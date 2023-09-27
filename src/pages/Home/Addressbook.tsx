@@ -9,22 +9,30 @@ import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import Button from '@material-ui/core/Button';
 import './Addressbook.scss';
 import NoContacts from '../../components/NoContacts/NoContacts';
+import { useDispatch, useSelector } from 'react-redux';
+import { setCurrentPage } from '../../store/Actions/paginationActions';
+import { PageState } from '../../store/types';
 
 const Addressbook = () => {
   const url = 'https://randomuser.me/api/?results=100';
   const { data } = useFetch<ApiResponse>(url);
   const [contactList, setContactList] = useState<ContactType[]>([]);
-  const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState('');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
 
-  const handleChangePage = (newPage: number) => {
-    setCurrentPage(newPage);
-  };
-
   const handleSearch = (query: string) => {
     setSearchQuery(query);
-    setCurrentPage(1);
+  };
+
+  // Redux state selectors
+  const currentPage = useSelector(
+    (state: PageState) => state.pagination.currentPage
+  );
+  const dispatch = useDispatch();
+
+  // Handle page change
+  const handleChangePage = (newPage: number) => {
+    dispatch(setCurrentPage(newPage));
   };
 
   const handleSortByName = () => {
