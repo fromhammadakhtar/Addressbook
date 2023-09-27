@@ -10,20 +10,6 @@ function Navbar() {
         <Typography variant='h5' className='logo'>
           Addressbook
         </Typography>
-        {/* <div className='navlinks'>
-          <Link to='/' className='link'>
-            Home
-          </Link>
-          <Link to='/about' className='link'>
-            About
-          </Link>
-          <Link to='/contact' className='link'>
-            Contact
-          </Link>
-          <Link to='/faq' className='link'>
-            FAQ
-          </Link>
-        </div> */}
       </Toolbar>
     </AppBar>
   );

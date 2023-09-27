@@ -9,6 +9,7 @@ interface PaginationProps {
 
 const PaginationComponent = (props: PaginationProps) => {
   const { currentPage, pageCount, onChange } = props;
+  if (pageCount < 2) return <></>;
   return (
     <div className='pagination-container'>
       <Pagination

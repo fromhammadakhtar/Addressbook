@@ -84,13 +84,11 @@ const Addressbook = () => {
       ) : (
         <>
           <Contacts contacts={contactsToDisplay} />
-          {pageCount > 1 && (
-            <PaginationComponent
-              currentPage={currentPage}
-              pageCount={pageCount}
-              onChange={handleChangePage}
-            />
-          )}
+          <PaginationComponent
+            currentPage={currentPage}
+            pageCount={pageCount}
+            onChange={handleChangePage}
+          />
         </>
       )}
     </div>
